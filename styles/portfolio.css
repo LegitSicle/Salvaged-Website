@@ -54,7 +54,7 @@ img {
     gap: 40px;
 }
 
-.container-circ .card-circ {
+.card-circ {
     position: relative;
     width: 220px;
     height: 250px;
@@ -68,7 +68,7 @@ img {
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-.container-circ .card-circ:hover {
+.card-circ:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }

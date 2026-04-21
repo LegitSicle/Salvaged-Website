@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/portfolio.css">
+  <link rel="stylesheet" href="/styles/components.css">
   <title>Document</title>
 </head>
 <body>
@@ -50,75 +51,35 @@
   <section class="skill-set">
     <h2>My Current Skill Set</h2>
     <div class="container-circ">
-      <div class="card-circ">
-        <div class="percent" style="--clr:orange; --num: 25">
-          <div class="dot"></div>
-            <svg>
-              <circle cx="70" cy="70" r="70"></circle>
-              <circle cx="70" cy="70" r="70"></circle>
-            </svg>
-          <div class="number">
-            <h2>25<span>%</span></h2>
-            <p>html</p>
-          </div>
-        </div>
-    </div>
+      <donut-chart
+        value="25"
+        title="HTML"
+        chart-color="orange">
+      </donut-chart>
 
-    <div class="card-circ">
-      <div class="percent" style="--clr:yellow; --num: 35">
-        <div class="dot"></div>
-        <svg>
-          <circle cx="70" cy="70" r="70"></circle>
-          <circle cx="70" cy="70" r="70"></circle>
-        </svg>
-        <div class="number">
-          <h2>35<span>%</span></h2>
-          <p>Java</p>
-        </div>
-      </div>
-    </div>
+      <donut-chart
+        value="35"
+        title="Java"
+        chart-color="yellow">
+      </donut-chart>
 
-    <div class="card-circ">
-      <div class="percent" style="--clr:blue; --num: 10">
-        <div class="dot"></div>
-        <svg>
-          <circle cx="70" cy="70" r="70"></circle>
-          <circle cx="70" cy="70" r="70"></circle>
-        </svg>
-        <div class="number">
-          <h2>10<span>%</span></h2>
-          <p>sql</p>
-        </div>
-      </div>
-    </div>
+      <donut-chart
+        value="10"
+        title="SQL"
+        chart-color="blue">
+      </donut-chart>
 
-    <div class="card-circ">
-      <div class="percent" style="--clr:purple; --num: 30">
-        <div class="dot"></div>
-        <svg>
-          <circle cx="70" cy="70" r="70"></circle>
-          <circle cx="70" cy="70" r="70"></circle>
-        </svg>
-        <div class="number">
-          <h2>30<span>%</span></h2>
-          <p>python</p>
-        </div>
-      </div>
-    </div>
+      <donut-chart
+        value="30"
+        title="Python"
+        chart-color="yellow">
+      </donut-chart>
 
-    <div class="card-circ">
-      <div class="percent" style="--clr:red; --num: 25">
-          <div class="dot"></div>
-          <svg>
-            <circle cx="70" cy="70" r="70"></circle>
-            <circle cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="number">
-            <h2>25<span>%</span></h2>
-            <p>CSS</p>
-          </div>
-        </div>
-      </div>
+      <donut-chart
+        value="25"
+        title="CSS"
+        chart-color="red">
+      </donut-chart>
     </div>
   </section>
 
@@ -199,5 +160,7 @@
     <h3>Ghianne Andrie C. Erfe</h3>
     <p>&copy; 2023 Ghianne Andrie C. Erfe. All rights reserved.</p>
   </footer>
+
+  <script src="/components/donut_chart.js"></script>
 </body>
 </html>
