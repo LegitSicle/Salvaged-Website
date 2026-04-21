@@ -6,7 +6,9 @@
 --pumpkin-spice: #fc6a0aff;
 --molten-orange: #e74504ff; */
 
-
+img {
+    width: 500px;
+}
 
 
 /* ABOUT-ME SECTION */
@@ -30,8 +32,6 @@
     display: flex;
     flex-direction: column;
 }
-
-
 
 
 
