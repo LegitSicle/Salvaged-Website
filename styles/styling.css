@@ -70,6 +70,8 @@ html{
     width: 100%;
     top: 0;
     z-index: 1000;
+
+    font-family: "Orbitron", sans-serif; /* 👈 ADD THIS */
 }
 
 .logo{
@@ -122,10 +124,15 @@ html{
     /* For Chrome/Safari */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+        text-shadow: 
+        0 0 5px rgba(252, 106, 10, 0.6),
+        0 0 10px rgba(252, 106, 10, 0.4),
+        0 0 20px rgba(252, 106, 10, 0.3);
 }
 
 .hero-content{
-    padding-top: 10px;
+    padding-top: 200px;
 }
 
 
