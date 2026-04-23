@@ -1,0 +1,148 @@
+/* CSS HEX */
+/* 
+--graphite: #292929ff;
+--charcoal: #585757ff;
+--linen: #f5ece4ff;
+--pumpkin-spice: #fc6a0aff;
+--molten-orange: #e74504ff; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    /* background: 
+    radial-gradient(circle at top, rgba(18,18,24,0.7), rgba(7,7,11,0.85), rgba(0,0,0,0.95)),
+    url("salvaged_bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    color: #e6e6e6;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* FOR SCROLLBAR */
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+    background: #292929; /* graphite */
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #fc6a0a, #e74504);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(252, 106, 10, 0.4);
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ff8c42, #fc6a0a);
+}
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #29292999;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #fc6a0aff;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.nav-links a{
+    color: #fc6a0aff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-links a:hover{
+    color: #e74504ff;
+    text-shadow: 0 0 8px rgba(255, 59, 59, 0.5);
+}
+
+/* HERO SECTION */
+
+.hero{
+    margin-top: 65px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background:
+        radial-gradient(circle at center, rgba(0,0,0,0.4), transparent 60%),
+        url("../assets/salvaged_bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gradient-text{
+    background: linear-gradient(to right, #ffb347, #fc6a0a, #fc6a0a);
+    
+    /* Standard */
+    background-clip: text;
+    color: transparent;
+
+    /* For Chrome/Safari */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero-content h1{
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    color: #f5ece4ff;
+    letter-spacing: 4px;
+    text-shadow: #e745041A;
+}
+
+.hero-content h3{
+    font-family: "Orbitron", sans-serif;
+    color: #f5ece4ff;
+    font-size: 1.5rem
+
+}
+
+#subtitle{
+    margin-top: 10px;
+    color: #f5ece4ff;
+    max-width: 600px;
+    margin-inline: auto;
+}
