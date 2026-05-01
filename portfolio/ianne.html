@@ -5,21 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/portfolio.css">
   <link rel="stylesheet" href="../styles/components.css">
-  <title>Document</title>
+  <!-- <link rel="stylesheet" href="../styles/styling.css"> -->
+  <title>Ghianne's Portfolio</title>
 </head>
 <body>
   <script src="../components/donut_chart.js"></script>
 
-  <section class="hero-section">
-    <h1>Hey, it's <span>Ghianne</span></h1>
-    <p>First year IT student passionate about web development and design.</p>
-    <p>Building projects and improving everyday</p>
-    <button class="btn">View Projects</button>
-    <button class="btn">Contact Me</button>
-  </section>
+  <header class="hero ianne-hero">
+    <nav class="navbar">
+      <div class="logo">SALVAGED</div>
+        <ul class="nav-links">
+                <li><a href="../Salvaged.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#progress">My Progress</a></li>
+                <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <section class="about-me">
-    <h2>About <span>Me</span></h2>
+        <div class="hero-content">
+          <h1>Hey, it's <span class="gradient-text">Ghianne</span></h1>
+          <p>First year IT student passionate about web development and design.</p>
+          <p>Building projects and improving everyday</p>
+
+
+          <div class="hero-buttons">
+            <button class="btn">Download CV</button>
+            <button class="btn secondary">View Projects</button>
+          </div>
+        </div>
+  </header>
+
+  <section class="section about" id="about">
+    <h2>About Me</h2>
       <dl class="about-info">
         <dt>Name:</dt>
         <dd>Ghianne Andrie C. Erfe</dd>
@@ -42,7 +61,7 @@
         <dt>GitHub:</dt>
         <dd><a href="https://github.com/Ianne-Drx" style="color: #E74504">Ianne-Drx</a></dd>
       </dl>
-    <div>
+    <div class="description">
       <p>I'm a first year student at Universidad de Dagupan.</p>
       <p>A Presidential Scholar of the university, and an Isko ng Bayan (DOST SCHOLAR)</p>
       <p>I'm currently learning HTML, CSS, and Python.</p>
@@ -50,7 +69,7 @@
     </div>
   </section>
 
-  <section class="skill-set">
+  <section class="section skill-set">
     <h2>My Current Skill Set</h2>
     <div class="container-circ">
       <donut-chart
@@ -85,55 +104,64 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section class="section projects" id="projects">
     <h2>My Projects</h2>
     <p>Here are some of the projects I've worked on during my first year:</p>
-    
-    <div class="project-card">
-      <img src="/assets/placeholder.jpg" alt="Salvaged: The Website">
-      <h3>Salvaged: The Website</h3>
-      <p>A website which aims to showcase our game, Salvaged.</p>
-      <p>This website also serves as our portfolio.</p>
-    </div>
-    <div class="project-card">
-      <img src="/assets/placeholder.jpg" alt="Salvaged: The Game">
-      <h3>Salvaged: The Game</h3>
-      <p>Our game, Salvaged, is a rogue-like that takes inspirations from the same genre such as The Binding of Isaac, and Enter the Gungeon. You must navigate through a series of rooms filled with hostiles and find a teleporter that leads to the next level. Utilize weapons to defeat the enemies and salvage any loot out of them. Every encounter runs the risk of losing health until the inevitable death.</p>
-    </div>
-    <div class="project-card">
-      <img src="/assets/placeholder.jpg" alt="NewLancer">
-      <h3>NewLancer</h3>
-      <p>A case study project for our HCI subject.</p>
-      <p>The website aims to abolish the bias amongst new and old freelancers, giving everyone equal opportunities.</p>
-      <button>View Project</button>
-    </div>
 
+    <div class="project-grid">
+
+      <div class="project-card">
+        <img src="/assets/placeholder.jpg" alt="Salvaged: The Website">
+        <h3>Salvaged: The Website</h3>
+        <p>A website which aims to showcase our game, Salvaged.</p>
+        <p>This website also serves as our portfolio.</p>
+        <a href="../Salvaged.html" target="blank"><button>Go to Website</button></a>
+      </div>
+
+      <div class="project-card">
+        <img src="/assets/placeholder.jpg" alt="Salvaged: The Game">
+        <h3>Salvaged: The Game</h3>
+        <p>Our game, Salvaged, is a rogue-like that takes inspirations from the same genre such as The Binding of Isaac, and Enter the Gungeon. You must navigate through a series of rooms filled with hostiles and find a teleporter that leads to the next level. Utilize weapons to defeat the enemies and salvage any loot out of them. Every encounter runs the risk of losing health until the inevitable death.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="/assets/placeholder.jpg" alt="NewLancer">
+        <h3>NewLancer</h3>
+        <p>A case study project for our HCI subject.</p>
+        <p>The website aims to abolish the bias amongst new and old freelancers, giving everyone equal opportunities.</p>
+        <button>View Project</button>
+      </div>
+    </div>
+    
+    <br>
     <h3>My Research Projects</h3>
-    <div class="project-card">
-      <img src="/assets/placeholder.jpg" alt="NewLancer">
-      <h3>
-        Water Spinach (Ipomoea aquatica) and Kakawate (Gliricidia sepium) Leaves Fermented Extract as Liquid Fertilizer tested on Tomato (Solanum lycopersicum) Plant
-      </h3>
-      <p>
-        This research study entitled “Water Spinach Ipomoea aquatica and Kakawate Gliricidia sepium Leaves Fermented Extract as Liquid Fertilizer tested on tomato plant” was conducted and studied to determine the potential of Water Spinach and Kakawate leaves as a Fermented Organic Liquid Fertilizer for tomato plants.
-      </p>
-      <button>Learn More</button>
-    </div>
-    <div class="project-card">
-      <img src="/assets/placeholder.jpg" alt="NewLancer">
-      <h3>Development and Implementation of an Automated Door Lock System Utilizing RFID Technology for Enhanced Security and Accessibility</h3>
-      <p>The study aims to develop and implement an RFID-based automated door lock system in Mangaldan National High School as well as to evaluate its effectiveness in addressing the laxity in security mechanisms, enhancing security, and providing a scalable and efficient access control solution.</p>
-      <button>Learn More</button>
-    </div>
-    <div class="project-card">
-      <img src="/assets/placeholder.jpg" alt="NewLancer">
-      <h3>ACADEMIC DISHONESTY: EXPLORING ARTIFICIAL INTELLIGENCE'S INFLUENCE ON GRADE 11 STUDENTS</h3>
-      <p>The study aims to develop and implement an RFID-based automated door lock system in Mangaldan National High School as well as to evaluate its effectiveness in addressing the laxity in security mechanisms, enhancing security, and providing a scalable and efficient access control solution.</p>
-      <button>Learn More</button>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="/assets/placeholder.jpg" alt="NewLancer">
+        <h3>
+          Water Spinach (Ipomoea aquatica) and Kakawate (Gliricidia sepium) Leaves Fermented Extract as Liquid Fertilizer tested on Tomato (Solanum lycopersicum) Plant
+        </h3>
+        <p>
+          This research study entitled “Water Spinach Ipomoea aquatica and Kakawate Gliricidia sepium Leaves Fermented Extract as Liquid Fertilizer tested on tomato plant” was conducted and studied to determine the potential of Water Spinach and Kakawate leaves as a Fermented Organic Liquid Fertilizer for tomato plants.
+        </p>
+        <button>Learn More</button>
+      </div>
+      <div class="project-card">
+        <img src="/assets/placeholder.jpg" alt="NewLancer">
+        <h3>Development and Implementation of an Automated Door Lock System Utilizing RFID Technology for Enhanced Security and Accessibility</h3>
+        <p>The study aims to develop and implement an RFID-based automated door lock system in Mangaldan National High School as well as to evaluate its effectiveness in addressing the laxity in security mechanisms, enhancing security, and providing a scalable and efficient access control solution.</p>
+        <button>Learn More</button>
+      </div>
+      <div class="project-card">
+        <img src="/assets/placeholder.jpg" alt="NewLancer">
+        <h3>ACADEMIC DISHONESTY: EXPLORING ARTIFICIAL INTELLIGENCE'S INFLUENCE ON GRADE 11 STUDENTS</h3>
+        <p>The study aims to develop and implement an RFID-based automated door lock system in Mangaldan National High School as well as to evaluate its effectiveness in addressing the laxity in security mechanisms, enhancing security, and providing a scalable and efficient access control solution.</p>
+        <button>Learn More</button>
+      </div>
     </div>
   </section>
 
-  <section class="leaning-journey">
+  <section class="section learning-journey">
     <h2>My Progress</h2>
     <p>I am currently improving my skills by building small projects and learning new technologies</p>
     <ul>
@@ -149,7 +177,7 @@
     <p>I may be a beginner, but this website is a testament of my growth and dedication.</p>
   </section>
 
-  <section class="contact-section">
+  <section class="section contact-section">
     <h2>Let's Connect</h2>
     <p>Feel free to reach out if you want to collaborate, ask questions, or check out my work.</p>
     <div class="contact-list">
@@ -158,7 +186,7 @@
       <li><a href="https://github.com/Ianne-Drx">GitHub</a></li>
     </div>
   </section>
-  <footer>
+  <footer class="footer">
     <h3>Ghianne Andrie C. Erfe</h3>
     <p>&copy; 2023 Ghianne Andrie C. Erfe. All rights reserved.</p>
   </footer>

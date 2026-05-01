@@ -1,58 +1,378 @@
-/* CSS HEX */
-/* 
---graphite: #292929ff;
---charcoal: #585757ff;
---linen: #f5ece4ff;
---pumpkin-spice: #fc6a0aff;
---molten-orange: #e74504ff; */
+/* ================== ROOT / GLOBAL ================== */
 
-img {
-    width: 500px;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at center, #121218, #07070b 60%, #000);
+    color: #e6e6e6;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 
-/* ABOUT-ME SECTION */
-.about-info {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 0.5rem 1rem;
-    font-size: 1.5rem;
+/* ================== SCROLLBAR ================== */
+
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-.about-info dt {
+::-webkit-scrollbar-track {
+    background: #292929;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #fc6a0a, #e74504);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(252, 106, 10, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ff8c42, #fc6a0a);
+}
+
+
+/* ================== NAVBAR ================== */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #29292999;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: "Orbitron", sans-serif;
+}
+
+.logo{
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #fc6a0a;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a{
+    color: #fc6a0a;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #e74504;
+    text-shadow: 0 0 8px rgba(255, 59, 59, 0.5);
+}
+
+
+/* ================== HERO ================== */
+
+.hero {
+    margin-top: 65px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+
+    position: relative;
+
+    background: url("../assets/temporary-header.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* DARK OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(circle at center,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.85)
+    );
+
+    z-index: 1;
+}
+/* KEEP TEXT ABOVE */
+.hero-content,
+.hero-buttons {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content{
+    padding-top: 120px;
+}
+
+.hero-content h1{
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    color: #f5ece4;
+    letter-spacing: 4px;
+}
+
+.hero-buttons{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+/* ================== BUTTONS ================== */
+
+.btn{
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
     font-weight: 600;
+    transition: 0.3s;
 }
 
-.about-info dd {
+.btn.primary{
+    background: #e74504;
+    color: white;
+    box-shadow: 0 0 15px rgba(252,106,10,0.4);
+}
+
+.btn.primary:hover{
+    transform: translateY(-2px);
+    background: #c53b00;
+}
+
+.btn.secondary{
+    border: 1px solid #fc6a0a;
+    color: #fc6a0a;
+    background: transparent;
+}
+
+.btn.secondary:hover{
+    background: rgba(252,106,10,0.2);
+}
+
+
+/* ================== SECTIONS ================== */
+
+.section{
+    padding: 100px 15%;
+}
+
+.section h2{
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 20px;
+}
+
+.section h2::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #e74504;
+    display: block;
+    margin-top: 8px;
+}
+
+
+/* ================== ABOUT ================== */
+
+.about-info{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.about-info dt{
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+}
+
+.about-info dd{
     margin: 0;
 }
 
-.about-me div p{
-    gap: 0.5rem;
+.description{
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+
+/* ================== SKILLS (DONUT FIX) ================== */
+
+/* .skills-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.skill-card{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+
+    transition: 0.3s;
 }
 
-
-
-/* SKILL-SET SECTION */
-.skill-set {
-    padding: 60px 10%;
-
+.skill-card:hover{
+    transform: translateY(-5px);
+    border-color: rgba(252,106,10,0.5);
+    box-shadow: 0 0 20px rgba(252,106,10,0.2);
 }
 
-.skill-set h2 {
-    color: black;
-}
+donut-chart{
+    width: 140px;
+    height: 140px;
+    display: block;
+} */
 
-.container-circ {
-    position: relative;
+/* ================== PROJECTS ================== */
+
+.project-grid{
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 30px;
+    gap: 30px;
     flex-wrap: wrap;
-    gap: 40px;
+}
+
+.project-card {
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 59, 59, .5);
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+    border-color: #ff3b3b;
+    box-shadow: 0 0 20px rgba(255, 59, 59, 0.3);
+}
+
+.project-card h3 {
+    margin: 15px 0 5px;
+}
+
+.project-card p {
+    color: #cecece;
+    font-family: "Inter", sans-serif;
+}
+
+.project-card button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #fc6a0a; /* pumpkin spice */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    
+}
+
+.project-card button:hover {
+    background: #292929; /* graphite */
 }
 
 
-/* PROJECTS SECTION */
+
+/* ================== LISTS ================== */
+
+ul{
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+li{
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+
+/* ================== FOOTER ================== */
+
+/* FOOTER */
+
+
+.footer {
+    margin-top: 80px;
+    padding: 30px 20px;
+    text-align: center;
+
+    background: rgba(41, 41, 41, 0.6); /* graphite with transparency */
+    backdrop-filter: blur(10px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 -5px 20px rgba(252, 106, 10, 0.08);
+
+    font-size: 0.9rem;
+    color: #aaa;
+
+    position: relative;
+}
+
+/* subtle glowing line on top */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #fc6a0a, transparent);
+    box-shadow: 0 0 10px #fc6a0a;
+}
+
+/* text styling */
+.footer p {
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+/* highlight name */
+.footer p:last-child {
+    color: #fc6a0a;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(252, 106, 10, 0.4);
+}
+
+/* optional hover glow (small detail but nice) */
+.footer:hover {
+    box-shadow: 0 -5px 30px rgba(252, 106, 10, 0.15);
+}

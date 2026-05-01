@@ -146,12 +146,6 @@ html{
 
 }
 
-.hero-cont{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
 .hero-buttons {
     margin-top: 25px;
     display: flex;
@@ -243,13 +237,20 @@ html{
     transform: translateY(-2px);
 }
 
+
 .btn.secondary{
-    border: 1px solid #e74504ff;
-    color: #e74504ff;
+    border: 1px solid rgb(255, 157, 119);
+    color: rgb(255, 157, 119);
+    box-shadow: 
+        0 0 8px rgba(252, 106, 10, 0.35),
+        0 0 20px rgba(252, 106, 10, 0.25);
+    font-weight: 700;
+
 }
 
 .btn.secondary:hover{
-    background: rgba(252, 106, 10, 0.1);
+    background: rgb(226, 68, 6, 0.4);
+    color: rgb(226, 68, 6)
 }
 
 /* SECTIONS */
@@ -380,9 +381,137 @@ ol li {
 }
 
 
+/* DEVELOPERS SECTION */
+#developers{
+    font-family: "Orbitron", sans-serif;
+
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.dev-card {
+    width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 59, 59, .5);
+    border-radius: 10px;
+}
+.dev-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.dev-card:hover{
+    transform: translateY(-10px);
+    border-color: #ff3b3b;
+    box-shadow: 0 0 20px rgba(255, 59, 59, 0.3);
+}
+
+.dev-card h3 {
+    margin: 15px 0 5px;
+}
+
+.dev-card p {
+    color: #cecece;
+    font-family: "Inter", sans-serif;
+}
+
+.dev-card button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #fc6a0a; /* pumpkin spice */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    
+}
+
+.dev-card button:hover {
+    background: #292929; /* graphite */
+}
+
+
+
+/* CALL TO ACTION */
+.cta-section {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(circle at center, rgba(255, 59, 59, 0.1), transparent 60%);
+  font-family: "Orbitron", sans-serif;
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.cta-section p {
+  color: #e5e5e5;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+
+
+.footer {
+    margin-top: 80px;
+    padding: 30px 20px;
+    text-align: center;
+
+    background: rgba(41, 41, 41, 0.6); /* graphite with transparency */
+    backdrop-filter: blur(10px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 -5px 20px rgba(252, 106, 10, 0.08);
+
+    font-size: 0.9rem;
+    color: #aaa;
+
+    position: relative;
+}
+
+/* subtle glowing line on top */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #fc6a0a, transparent);
+    box-shadow: 0 0 10px #fc6a0a;
+}
+
+/* text styling */
+.footer p {
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+/* highlight name */
+.footer p:last-child {
+    color: #fc6a0a;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(252, 106, 10, 0.4);
+}
+
+/* optional hover glow (small detail but nice) */
+.footer:hover {
+    box-shadow: 0 -5px 30px rgba(252, 106, 10, 0.15);
+}
+
 
 /* TEXT ANIMATIONS */
-h2, .feature-card h3 {
+h2, .feature-card h3, .dev-card h3 {
     animation: colorShift 2s infinite alternate ease-in-out;
 }
 
