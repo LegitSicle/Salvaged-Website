@@ -125,16 +125,16 @@
 
 
 h2, .gradient-text {
-    animation: colorShift 2s infinite alternate ease-in-out;
+  animation: colorShift 2s infinite alternate ease-in-out;
 }
 
 
 @keyframes colorShift {
-    0%{
-        
-        color: #fc6a0aff;
-    }
-    100% {
-        color: rgb(208, 0, 0); 
-    }
+  0%{
+    
+    color: #fc6a0aff;
+  }
+  100% {
+    color: rgb(208, 0, 0); 
+  }
 }
